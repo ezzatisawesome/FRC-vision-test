@@ -13,9 +13,9 @@ import warnings
 
 warnings.filterwarnings('ignore')   # Suppress Matplotlib warnings
 
-PATH_TO_SAVED_MODEL = "/Users/ezzatsuhaime/Desktop/Vision/exported-models/mymodel/saved_model"
-PATH_TO_TRAIN_IMAGES = "/Users/ezzatsuhaime/Desktop/Vision/images/placeholder"
-PATH_TO_LABELS = "/Users/ezzatsuhaime/Desktop/Vision/label_map.pbtxt"
+PATH_TO_SAVED_MODEL = "/Users/ezzatsuhaime/Documents/FRC_Vision_Test/exported-models/vision_model_2/saved_model"
+PATH_TO_TRAIN_IMAGES = "/Users/ezzatsuhaime/Documents/FRC_Vision_Test/images/placeholder"
+PATH_TO_LABELS = "/Users/ezzatsuhaime/Documents/FRC_Vision_Test/label_map.pbtxt"
 
 print('Loading model...', end='')
 start_time = time.time()
@@ -92,7 +92,7 @@ for image_path in IMAGE_PATHS:
         category_index,
         use_normalized_coordinates=True,
         max_boxes_to_draw=200,
-        min_score_thresh=.0101,
+        min_score_thresh=.2,
         agnostic_mode=False)
 
   plt.figure()
